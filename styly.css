@@ -7,6 +7,10 @@ body {
 
 }
 
+a {
+  text-decoration: none;
+}
+
 .logo {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -44,8 +48,10 @@ body {
   margin-bottom: 1px;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   background-color: #1cbb96;
+  cursor: pointer;
 }
 
 .button__start {
@@ -53,8 +59,32 @@ body {
   margin-bottom: 0px;
 }
 
-.button__start:hover {
+.button__start:hover,
+.button__start:focus {
   background-color: #0090e9;
+}
+
+.button__icon {
+  width: 21px;
+  height: 23px;
+  padding: 0;
+  border-radius: 3px;
+}
+
+.button__game {
+  margin: 0;
+  padding: 0;
+  border: none;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: transparent;
+  border: 0.7px solid rgb(77, 75, 75);
+}
+
+.button__game:hover,
+.button__game:focus {
+  background-color: #ffffff20;
+  cursor: pointer;
 }
 
 @media (min-width:620px) {
@@ -62,4 +92,32 @@ body {
     max-width: 40%;
     margin: 50px auto;
   }
+}
+
+.game__navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.game-container {
+  max-width: 80vmin;
+  justify-content: center;
+  margin: 50px 20%;
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  margin-top: 3px;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  aspect-ratio: 1/1;
+  background-color: #ffffff20;
+  /* border: 1px solid rgb(77, 75, 75); */
 }
