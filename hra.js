@@ -21,6 +21,13 @@ const playerMove = (event) => {
   event.target.disabled = true;
 };
 
+const restartConfirmation = (event) => {
+  if (confirm('Opravdu chceš začít znovu?') === false) {
+    event.preventDefault();
+  }
+  console.log('neco se volalo');
+};
+
 document
   .querySelector('.button__game:nth-child(1)')
   .addEventListener('click', playerMove);
@@ -60,3 +67,7 @@ document
 document
   .querySelector('.button__game:nth-child(10)')
   .addEventListener('click', playerMove);
+
+document
+  .querySelector('.button__start')
+  .addEventListener('click', restartConfirmation);

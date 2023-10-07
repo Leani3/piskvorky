@@ -1,3 +1,13 @@
+@keyframes playerMoveAnimation {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
 html {
   margin: 0;
 }
@@ -84,6 +94,7 @@ a {
   min-height: 10px;
   background-color: transparent;
   border: 0.7px solid rgb(77, 75, 75);
+
 }
 
 .button__game:hover,
@@ -124,8 +135,6 @@ a {
   grid-template-columns: repeat(10, 10%);
   aspect-ratio: 1/1;
   background-color: #ffffff20;
-  /* border: 1px solid rgb(77, 75, 75); */
-
 }
 
 .board__field--circle {
@@ -133,6 +142,7 @@ a {
   background-size: 65%;
   background-position: center;
   background-repeat: no-repeat;
+  animation: playerMoveAnimation 0.15s;
 }
 
 .board__field--cross {
@@ -140,4 +150,5 @@ a {
   background-size: 65%;
   background-position: center;
   background-repeat: no-repeat;
+  animation: playerMoveAnimation 0.15s;
 }
