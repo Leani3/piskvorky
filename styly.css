@@ -125,4 +125,19 @@ a {
   aspect-ratio: 1/1;
   background-color: #ffffff20;
   /* border: 1px solid rgb(77, 75, 75); */
+
+}
+
+.board__field--circle {
+  background-image: url('pictures/circle__black.svg');
+  background-size: 65%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.board__field--cross {
+  background-image: url('pictures/cross__black.svg');
+  background-size: 65%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
