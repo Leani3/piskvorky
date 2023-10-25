@@ -39,12 +39,12 @@ const playerMove = (event) => {
       window.location.reload();
     };
     setTimeout(winnerIs, 300);
-  } else if (vitez === 'tie') {
+  } else if (vitez != null) {
     const tieIs = () => {
       alert(`No tak nic. Musíte začít znovu`);
       window.location.reload();
     };
-    setTimeout(winnerIs, 300);
+    setTimeout(tieIs, 300);
   }
 };
 
